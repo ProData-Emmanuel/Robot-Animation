@@ -28,12 +28,26 @@ h1 {
 	margin: 0 auto;
 	height: 150px;
 	border-radius: 200px 200px 0 0;
+    position: relative; /* To make it easier to position the eyes */
 	border-bottom: 10px;
 }
 
 .eyes {
-	display: flex;
+    display: flex;
+    justify-content: space-around; /* Ensures the eyes are evenly spaced out within the head */
+    position: absolute;
+    top: 50px; /* Positions the eyes lower within the head */
+    width: 100%; /* Make the eyes container span full width of the head, to ensure the eyes are positioned correctly within the head*/
 }
+
+
+.left_eye, .right_eye {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make the eyes circular */
+    background-color: white;
+}
+
 
 .head:hover {
 	width: 300px;
@@ -126,28 +140,13 @@ h1 {
     transform: rotate(20deg);
 }
 
-}
 
-.left_eye, right_eye {
+.left_eye, .right_eye {
 	width: 20px; 
 	height: 20px; 
-	border-radius: 15px; 
+	border-radius: 50%; /* Make the eyes circular */
 	background-color: white;  
-
 }
-
-.left_eye { 
-	position: relative; 
-	top: 100px; 
-	left: 40px; 
-}
-
-.right_eye { 
-	position: relative; 
-	top: 100px; 
-	left: 120px; 
-}
-
 
 p {
 	text-align: center;
